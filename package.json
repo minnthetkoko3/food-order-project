@@ -1,0 +1,33 @@
+{
+  "name": "food-order",
+  "description": "Food order api server.",
+  "author": "Minn Thet Ko Ko",
+  "license": "MIT",
+  "version": "1.0.0",
+  "type": "module",
+  "private": "true",
+  "main": "server.js",
+  "scripts": {
+    "start": "node _server.js",
+    "dev": "nodemon -q -x \"clear && node _server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minnthetkoko3/food-order.git"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.0"
+  },
+  "devDependencies": {
+    "node": "^16.15.1",
+    "nodemon": "^2.0.19",
+    "npm": "^8.11.0"
+  }
+}
