@@ -8,11 +8,13 @@ import authorizationMiddleware from '../middlewares/authorization.middleware.js'
 import authRouter from './auth.router.js';
 import productsRouter from './products.router.js';
 import cartsRouter from './carts.router.js';
+import ordersRouter from './orders.router.js';
 
 const routers = Router();
 
 routers.use('/auth', requestLimitMiddleware, authRouter);
 routers.use('/products', authorizationMiddleware, productsRouter);
 routers.use('/carts', authorizationMiddleware, cartsRouter);
+routers.use('/orders', authorizationMiddleware, ordersRouter);
 
 export default routers;

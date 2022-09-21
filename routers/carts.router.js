@@ -16,7 +16,7 @@ cartsRouter.post('/', async (req, res) => {
     if (errors) return console.Error(message, errors, 'Read error detail and try again.').send(res, 400);
 
     // ✔ create cart data and save
-    const cart = new cartsModel({ _id, customer_id, product_name, price, qty });
+    const cart = new cartsModel({ customer_id, product_name, price, qty });
     await cart.save();
     return console.Success(message).send(res, 200, cart);
   } catch (error) {
